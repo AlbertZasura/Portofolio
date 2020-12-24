@@ -1,0 +1,100 @@
+body{
+    color: #45505b !important;
+}
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: linear-gradient(to bottom, rgba(236, 229, 229, 0.8) 0%, rgba(236, 229, 229, 0.8) 100%), url('../Img/t.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.masthead h1 {
+    font-size: 2.25rem;
+}
+
+
+/*  Social Media  */
+.fa {
+    margin-right: 1.5%;
+    font-size: 28px !important;
+    text-align: left;
+    text-decoration: none;
+    color: #45505b 
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    color: #186fc0;
+}
+
+
+@media (min-width: 992px) {
+    #mainNav {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    header.masthead {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+
+    header.masthead p {
+        font-size: 1.15rem;
+    }
+
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    header.masthead h1 {
+        font-size: 3.5rem;
+    }
+}
+
+#text {
+	display: inline-block;
+    font-size: 28px !important;
+	color: #186fc0;
+	letter-spacing: 2px;
+}
+
+#cursor {
+    vertical-align: text-bottom;
+	display: inline-block;
+	width: 3px;
+	height: 30px;
+	background-color: #186fc0;
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent; 
+	}
+	50% { 
+		background-color: #186fc0; 
+	}
+}
+
+.inline{
+    display: inline;
+    font-size: 28px !important;
+}
+
+h2::after{
+    content: '';
+    display: block;
+    border-bottom: 4px solid#186fc0;
+    width: 3%;
+    margin: 0px auto;
+    margin-bottom: 45px;
+    padding-top: 7px;
+}
