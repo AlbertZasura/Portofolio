@@ -1,6 +1,7 @@
-body{
+body {
     color: #45505b !important;
 }
+
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
@@ -22,7 +23,7 @@ header.masthead h1 {
     font-size: 28px !important;
     text-align: left;
     text-decoration: none;
-    color: #45505b 
+    color: #45505b
 }
 
 /* Add a hover effect if you want */
@@ -60,36 +61,39 @@ header.masthead h1 {
 }
 
 #text {
-	display: inline-block;
+    display: inline-block;
     font-size: 28px !important;
-	color: #186fc0;
-	letter-spacing: 2px;
+    color: #186fc0;
+    letter-spacing: 2px;
 }
 
 #cursor {
     vertical-align: text-bottom;
-	display: inline-block;
-	width: 3px;
-	height: 30px;
-	background-color: #186fc0;
-	animation: blink .75s step-end infinite;
+    display: inline-block;
+    width: 3px;
+    height: 30px;
+    background-color: #186fc0;
+    animation: blink .75s step-end infinite;
 }
 
 @keyframes blink {
-	from, to { 
-		background-color: transparent; 
-	}
-	50% { 
-		background-color: #186fc0; 
-	}
+
+    from,
+    to {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: #186fc0;
+    }
 }
 
-.inline{
+.inline {
     display: inline;
     font-size: 28px !important;
 }
 
-h2::after{
+h2::after {
     content: '';
     display: block;
     border-bottom: 4px solid#186fc0;
@@ -97,4 +101,124 @@ h2::after{
     margin: 0px auto;
     margin-bottom: 45px;
     padding-top: 7px;
+}
+
+
+.column {
+    -ms-flex: 30%;
+    /* IE10 */
+    flex: 30%;
+    max-width: 30%;
+}
+
+.column img {
+    vertical-align: middle;
+    width: 100%;
+    /* box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1) !important; */
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    padding: .5em .8em;
+}
+
+.content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0%;
+    overflow: hidden;
+    width: 97%;
+    height: 97%;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.content:hover .overlay{
+    color: #3DA35D;
+    cursor: pointer;
+    opacity: 90%;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.content:hover .text, .content:hover:before{
+    opacity: 100%;
+}
+
+.text {
+    color: #45505b;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content::before,
+.content::after {
+  content: '';
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.content::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #3E8914;
+  border-right: 3px solid #2E640F;
+  transform: translate(-100%, 50%);
+}
+
+.content:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #2E640F;
+  border-left: 3px solid #3E8914;
+  transform: translate(100%, -50%)
+}
+
+.content:hover:before,
+.content:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
 }
