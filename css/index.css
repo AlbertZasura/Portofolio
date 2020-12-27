@@ -169,7 +169,6 @@ h2::after {
 
 .content:hover .overlay {
     color: #3DA35D;
-    cursor: pointer;
     opacity: 90%;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -207,8 +206,8 @@ h2::after {
     content: '';
     right: 0;
     top: 0;
-    border-top: 3px solid #3E8914;
-    border-right: 3px solid #2E640F;
+    border-top: 3px solid  #186fc0;
+    border-right: 3px solid   #0084ff;
     transform: translate(-100%, 50%);
 }
 
@@ -216,8 +215,8 @@ h2::after {
     content: '';
     left: 0;
     bottom: 0;
-    border-bottom: 3px solid #2E640F;
-    border-left: 3px solid #3E8914;
+    border-bottom: 3px solid  #0084ff;
+    border-left: 3px solid  #186fc0;
     transform: translate(100%, -50%)
 }
 
@@ -226,3 +225,5 @@ h2::after {
     transform: translate(0, 0);
     opacity: 1;
 }
+
+
