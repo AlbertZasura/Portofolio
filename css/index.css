@@ -16,6 +16,9 @@ header.masthead h1 {
     font-size: 2.25rem;
 }
 
+.about{
+    opacity: 1;
+}
 
 /*  Social Media  */
 .fa {
@@ -164,7 +167,7 @@ h2::after {
     transition: .3s ease;
 }
 
-.content:hover .overlay{
+.content:hover .overlay {
     color: #3DA35D;
     cursor: pointer;
     opacity: 90%;
@@ -173,7 +176,8 @@ h2::after {
     transform: scale(1);
 }
 
-.content:hover .text, .content:hover:before{
+.content:hover .text,
+.content:hover:before {
     opacity: 100%;
 }
 
@@ -191,34 +195,34 @@ h2::after {
 
 .content::before,
 .content::after {
-  content: '';
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  transition: all .35s ease;
-  opacity: 0;
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
 }
 
 .content::before {
-  content: '';
-  right: 0;
-  top: 0;
-  border-top: 3px solid #3E8914;
-  border-right: 3px solid #2E640F;
-  transform: translate(-100%, 50%);
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #3E8914;
+    border-right: 3px solid #2E640F;
+    transform: translate(-100%, 50%);
 }
 
 .content:after {
-  content: '';
-  left: 0;
-  bottom: 0;
-  border-bottom: 3px solid #2E640F;
-  border-left: 3px solid #3E8914;
-  transform: translate(100%, -50%)
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #2E640F;
+    border-left: 3px solid #3E8914;
+    transform: translate(100%, -50%)
 }
 
 .content:hover:before,
-.content:hover:after{
-  transform: translate(0,0);
-  opacity: 1;
+.content:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
 }
